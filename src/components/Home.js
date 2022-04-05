@@ -1,4 +1,4 @@
-import React, { Suspense, useRef } from 'react';
+import React, { Suspense, useRef, useState } from 'react';
 import { Canvas, useLoader } from '@react-three/fiber' //npm i @react-three/fiber
 import { useGLTF, OrbitControls } from '@react-three/drei'; //npm i @react-three/drei
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
@@ -49,14 +49,35 @@ function Mesa({ ...props }) {
     </group>
   )
 }
-
 useGLTF.preload('/Mesa.glb')
 
+
 export default function Home(){
+
+/*
+ainda não feito
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(7);
+  var yy, xx;
+
+  const mouseLeave = () => {
+    //reseta o array da camera
+    setX(0);
+    setY(7);
+  }
+  const mouseMove = (e) => {
+    var mouseY = e.clientY;
+    var mouseX = e.clientX;
+  } 
+*/
+
   return (
-    <div className="home">
+    <div className="home" id="home"
+      onMouseLeave={mouseLeave}
+      onMouseMove={mouseMove}
+    >
       {/*esquerda direita?, altura, o quao longe eu to*/}
-      <Canvas style={{width: '100vw', height: '100vh'}} dpr={[1, 2]} camera={ { position: [0, 7, 35], fov: 25 } }>
+      <Canvas style={{width: '100vw', height: '100vh'}} dpr={[1, 2]} camera={ { position: [x, y, 35], fov: 25 }}>
         <Suspense>
 
           <ambientLight intensity={0.20}/>

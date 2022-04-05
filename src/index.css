@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
 :root {
-  --white: #F2F2F2;
+  --white: rgba(242, 242, 242, 1);
+  --black: rgba(13, 13, 13, 1);
+  --pink-strong: rgba(242, 89, 78, 1);
+  --pink-medium: rgba(242, 147, 141, 1);
+  --pink-weak:  rgba(242, 179, 174, 1);
   --header-opacity: 1;
 }
 
@@ -36,10 +40,14 @@ img{
 .header {
   z-index: 100;
   position: fixed;
-  background-color: rgba(242, 147, 141, var(--header-opacity));
+  background-color: rgba(242, 147, 141, 0);
   color: var(--white);
   width: 100%;
   height: auto;
+  transition: all 0.5s;
+}
+.header.active{
+  background-color: rgba(242, 147, 141, 1);
 }
 .header_content {
   padding: 0 2em;
@@ -52,7 +60,51 @@ img{
   display: inline-flex;
   flex-wrap: wrap;
   gap: 2em;
+
+  position: absolute;
+  opacity: 0;
 }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  position: absolute;
+  right:0;
+  top:0;
+  transform: translateX(100%);
+  transition: all 0.3s;
+  
+  height: 100vh;
+  width: 15em;
+  background: rgba(242, 147, 141, 1);
+}
+.sidebar.active{
+  transform: translateX(0%);
+}
+.sidebar-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1em;
+}
+.sidebar_icon, .sidebar-close-icon{
+  cursor: pointer;
+}
+@media only screen and (min-width : 870px) {
+  .header_list {
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  .sidebar_icon{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}
+
 
 /* PRODUTOS */
 .produtos {
@@ -79,8 +131,6 @@ img{
   line-height: 30px;
   letter-spacing: 0.09em;
 }
-
-/* 870px */
 @media only screen and (min-width : 870px) {
   .produto {
     display: flex;
@@ -105,4 +155,32 @@ img{
   #produto_2 .produtos_texto{
     text-align: right;
   }
+}
+
+/* FOOTER */
+.footer{
+  background-color: var(--pink-medium);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_social{
+  display: inline-flex;
+  gap: 0.5em;
+}
+@media only screen and (min-width : 870px) {
+  .footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
+  .footer_content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
 }
