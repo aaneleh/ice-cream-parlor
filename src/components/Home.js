@@ -54,12 +54,10 @@ useGLTF.preload('/Mesa.glb')
 
 export default function Home(){
 
-/*
-ainda não feito
+  //só um setup, ainda não programado
   const [x, setX] = useState(0);
   const [y, setY] = useState(7);
   var yy, xx;
-
   const mouseLeave = () => {
     //reseta o array da camera
     setX(0);
@@ -69,7 +67,6 @@ ainda não feito
     var mouseY = e.clientY;
     var mouseX = e.clientX;
   } 
-*/
 
   return (
     <div className="home" id="home"
