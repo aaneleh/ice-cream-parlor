@@ -36,5 +36,8 @@
 
 
 ## Demonstração
+<<<<<<< HEAD
 
 [https://sorveteria-summer.vercel.app/](https://sorveteria-summer.vercel.app/)
+=======
+>>>>>>> df3ee45e7751c5b67f5904f6dbc41d69de2be5e8
