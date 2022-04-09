@@ -5,17 +5,19 @@ import { useGLTF, OrbitControls, Text, Environment} from '@react-three/drei'; //
 /***************** TEXTO ******************/
 function Texto() {
   return (
-    <Text
-      position={[-0.75, 1, -5]}
-      lineHeight={1}
-      font="/Dosis-ExtraBold.ttf"
-      fontSize={3.5}
-      letterSpacing={0.09}
-      color="#f2594e"
-      anchorX="center"
-      anchorY="middle">
-      SUMMER
-    </Text>
+    <>
+      <Text
+        position={[-0.75, 1, -5]}
+        lineHeight={1}
+        font="/Dosis-ExtraBold.ttf"
+        fontSize={3.5}
+        letterSpacing={0.09}
+        color="#f2594e"
+        anchorX="center"
+        anchorY="middle">
+        SUMMER
+      </Text>
+    </>
   )
 } 
 
@@ -58,9 +60,9 @@ export default function Home(){
   return (
     <div className="home" id="home">
       <Canvas style={{width: '100vw', height: '70vh'}} dpr={[1, 2]} camera={ { position: [2, 6, 30], fov: 15 }}>
-        <color attach="background" args={[0.87, 0.87, 0.87]} />
         <Suspense>
-          <Environment preset="sunset" /> {/* presets: sunset, dawn, night, warehouse, forest, apartment, studio, city, park, lobby */}
+          <color attach="background" args={[0.87, 0.87, 0.87]} />
+          <Environment preset="sunset"/>
           <pointLight position={[0, 7, 5]} intensity={0.5} />
 
           <OrbitControls/>
