@@ -13,10 +13,10 @@ function Produtos() {
                     </img>
                 </div>
                 <div className='produtos_texto'>
-                    <h2 className='produtos_titulo'>
-                        TÍTULO PLACEHOLDER
+                    <h2 className='produtos_titulo titulo'>
+                        PICOLÉS
                     </h2>
-                    <p className='produtos_descricao'>
+                    <p className='produtos_descricao texto'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis dolor expedita soluta quos ducimus, debitis asperiores sequi quibusdam qui vitae id provident labore atque consectetur assumenda a nam nostrum.
                         <br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis dolor expedita soluta quos ducimus, debitis asperiores sequi quibusdam qui vitae id provident labore atque consectetur assumenda a nam nostrum.
                     </p>
@@ -29,10 +29,10 @@ function Produtos() {
                     </img>
                 </div>
                 <div className='produtos_texto'>
-                    <h2 className='produtos_titulo'>
-                        TITULO PLACEHOLDER
+                    <h2 className='produtos_titulo titulo'>
+                        SORVETES
                     </h2>
-                    <p className='produtos_descricao'>
+                    <p className='produtos_descricao texto'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis dolor expedita soluta quos ducimus, debitis asperiores sequi quibusdam qui vitae id provident labore atque consectetur assumenda a nam nostrum.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis dolor expedita soluta quos ducimus, debitis asperiores sequi quibusdam qui vitae id provident labore atque consectetur assumenda a nam nostrum.
                     </p>
