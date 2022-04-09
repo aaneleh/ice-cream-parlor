@@ -45,3 +45,4 @@ Então a corpo principal com imagens e descrição dos produtos e, por fim, o lo
 [https://sorveteria-summer.vercel.app/](https://sorveteria-summer.vercel.app/)
 
 [![Thumbnail do vídeo](https://img.youtube.com/vi/WohoRAZlDwc/0.jpg)](https://www.youtube.com/watch?v=WohoRAZlDwc)
+[https://youtu.be/WohoRAZlDwc](https://youtu.be/WohoRAZlDwc)
